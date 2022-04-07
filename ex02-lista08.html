@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2</title>
+</head>
+<body>
+    <h2>Renda Tuvalu</h2>
+    Renda familiar
+    <input id="iptRenda" type="text">
+    <br><br>
+    <button onclick="btAnalise()">Analisar</button>
+    <span id="mensagem"></span>
+
+    
+</body>
+</html>
+<script>
+    function btAnalise(){
+        var renda = iptRenda.value
+        if (renda <=250){
+            mensagem.innerHTML = `Classe E`
+        }
+        else if (renda > 250 && renda <=900){
+            mensagem.innerHTML = `Classe D`
+        }
+        else if (renda > 900 && renda <=2500){
+            mensagem.innerHTML = `Classe C`
+        }
+        else if (renda > 2500 && renda >=9500){
+            mensagem.innerHTML = `Classe B`
+        }
+        else{
+            mensagem.innerHTML = `Classe A`
+        }
+    }
+</script>

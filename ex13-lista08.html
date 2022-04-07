@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Valor guardado R$ <span id="mensagemValor">0</span></h2>
+    <p id="pResposta"></p>
+    <br>
+    <button onclick="bt5()">Gastar R$ 5</button>
+    <button onclick="bt10()">Gastar R$ 10</button>
+    
+</body>
+</html>
+<script>
+    var valor = 0
+    function bt5(){
+        valor = valor + 5
+        mensagemValor.innerHTML = valor.toFixed(2)
+        
+        if(valor <= -20){
+            pResposta.innerHTML = 'Quase um corinthians'
+        }
+        else if (valor < 0){
+            pResposta.innerHTML = 'Finanças em perigo'
+        }
+        else if (valor >= 0 && valor <=100){
+            pResposta.innerHTML = 'Finanças OK'
+        }
+        else{
+            pResposta.innerHTML = 'Finanças OK<br>#Ostentação'
+        }
+        
+    }
+    function bt10(){
+        valor = valor - 10
+        mensagemValor.innerHTML = valor.toFixed(2)
+        if(valor < -20){
+            pResposta.innerHTML = 'Quase um corinthians'
+        }
+        else if (valor < 0){
+            pResposta.innerHTML = 'Finanças em perigo'
+        }
+        else if (valor >= 0 && valor <=100){
+            pResposta.innerHTML = 'Finanças OK'
+        }
+        else{
+            pResposta.innerHTML = '#Ostentação'
+        }
+    }
+</script>

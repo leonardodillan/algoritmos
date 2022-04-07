@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Valor economizado
+    <input id="iptVlr" type="text">
+    <br>
+    <button onclick="btPoder()">Poder de compra</button>
+    <br>
+    <span id="mensagem"></span>
+    
+</body>
+</html>
+<script>
+    function btPoder(){
+        valor = iptVlr.value
+        if (valor <= 0){
+            mensagem.innerHTML = 'Nada de compras'
+        }
+        else if (valor > 0 && valor <=100){
+            mensagem.innerHTMl = 'Exibir Viajem de ida e volta pra Praia Grande'
+        }
+        else if (valor > 100 && valor <4000){
+            mensagem.innerHTML += 'Uma boa moto usada'
+        }
+        else{
+            mensagem.innerHTML += 'Mais alguma bobagem legal'
+        }
+    }
+</script>
